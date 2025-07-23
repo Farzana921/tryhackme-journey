@@ -5,8 +5,7 @@ Cybersecurity is an exciting and fast-growing field focused on defending systems
 This guide breaks down some of the most in-demand roles in cybersecurity and what they involve.
 
 
-## Cybersecurity Analyst  
-**What They Do:**  
+## Cybersecurity Analyst   
 Cybersecurity Analysts are the first line of defense. They monitor systems, detect suspicious activity, and respond to threats in real time.
 
 **Responsibilities:**  
@@ -18,8 +17,7 @@ Cybersecurity Analysts are the first line of defense. They monitor systems, dete
 
 
 ##  Security Engineer  
-**What They Do:**  
-Security Engineers build and maintain secure systems. Their job is to design solutions that prevent attacks before they happen.
+ty Engineers build and maintain secure systems. Their job is to design solutions that prevent attacks before they happen.
 
 **Responsibilities:**  
 - Design and implement security tools and architectures  
@@ -30,8 +28,7 @@ Security Engineers build and maintain secure systems. Their job is to design sol
 
 
 
-## Incident Responder  
-**What They Do:**  
+## Incident Responder   
 When things go wrong, Incident Responders are called in. They manage breaches and minimize damage as quickly and efficiently as possible.
 
 **Responsibilities:**  
@@ -42,8 +39,7 @@ When things go wrong, Incident Responders are called in. They manage breaches an
 - Work closely with legal and compliance teams  
 
 
-## Digital Forensic Examiner  
-**What They Do:**  
+## Digital Forensic Examiner    
 Digital Forensic Examiners act like detectives — gathering and analyzing digital evidence to support investigations or uncover how incidents occurred.
 
 **Responsibilities:**  
@@ -55,8 +51,7 @@ Digital Forensic Examiners act like detectives — gathering and analyzing digit
 
 
 
-## Malware Analyst  
-**What They Do:**  
+## Malware Analyst   
 Malware Analysts dive deep into malicious code to understand how it works, what it does, and how to stop it.
 
 **Responsibilities:**  
@@ -69,7 +64,6 @@ Malware Analysts dive deep into malicious code to understand how it works, what 
 
 
 ## Penetration Tester (Ethical Hacker)  
-**What They Do:**  
 Penetration Testers, also called ethical hackers, try to break into systems — legally — to find vulnerabilities before attackers do.
 
 **Responsibilities:**  
@@ -80,7 +74,6 @@ Penetration Testers, also called ethical hackers, try to break into systems — 
 - Stay current with hacking tools and techniques  
 
 ## Red Teamer  
-**What They Do:**  
 Red Teamers go beyond traditional pentesting. They simulate real-world adversaries to test how well a company can detect and respond to sophisticated attacks.
 
 **Responsibilities:**  
@@ -94,5 +87,4 @@ Red Teamers go beyond traditional pentesting. They simulate real-world adversari
 ## Final Thoughts  
 Cybersecurity offers diverse, meaningful career paths whether you're passionate about building secure systems, investigating threats, or outsmarting hackers. Each role plays a vital part in keeping people and data safe.
 
-> 💡 *Tip:* Explore certifications like CompTIA Security+, CEH, CISSP, OSCP, or GCIH to help you build your expertise.
 
