@@ -47,12 +47,11 @@ This room explores the fundamentals of information security governance, regulati
 - Involves independent auditing and reporting for assurance.
 
 
-
 ## Final Thoughts
 
 Security is not about achieving 100% protection — it’s about reducing risks, being compliant, and staying proactive. Frameworks like ISO 27001, NIST 800-53, and SOC 2 help organisations build strong, adaptable security programs.
 
 
 
-## Flag
+## Final Flag :
 `THM{SECURE_1001}`
