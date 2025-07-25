@@ -59,13 +59,13 @@ Metasploit is the most widely used **exploitation framework** in cybersecurity. 
   * **Adapters**: Convert payloads into different formats (e.g., PowerShell).
 * **Post**: Used after a successful exploit (e.g., data exfiltration, privilege escalation).
 
-### Payload Examples
+## Payload Examples
 
 * `generic/shell_reverse_tcp` → Single payload (`_` format)
 * `windows/x64/shell/reverse_tcp` → Staged payload (`/` format)
 * `windows/x64/pingback_reverse_tcp` → Single payload
 
-### Modules are stored in:
+## Modules are stored in:
 
 ```
 /opt/metasploit-framework/embedded/framework/modules/
@@ -76,7 +76,7 @@ Metasploit is the most widely used **exploitation framework** in cybersecurity. 
 
 `msfconsole` is the main CLI for the Metasploit Framework. It allows users to search, configure, and run modules.
 
-### Starting Metasploit
+## Starting Metasploit
 
 ```bash
 msfconsole
@@ -84,7 +84,7 @@ msfconsole
 
 * The prompt will look like: `msf6 >` or `msf5 >` depending on your version.
 
-### Common Commands
+## Common Commands
 
 | Command                    | Description                       |
 | -------------------------- | --------------------------------- |
@@ -97,7 +97,7 @@ msfconsole
 | `back`                     | Exit module context               |
 | `history`                  | Show command history              |
 
-### Context Awareness
+## Context Awareness
 
 When using a module, the prompt changes to reflect the context:
 
@@ -107,7 +107,7 @@ msf6 exploit(windows/smb/ms17_010_eternalblue) >
 
 Parameters set here are **module-specific**, unless set globally using `setg`.
 
-### Advanced Search Examples
+## Advanced Search Examples
 
 ```bash
 search cve:2017-0144
@@ -115,7 +115,7 @@ search type:exploit apache
 search platform:windows
 ```
 
-### Exploit Ranking System
+## Exploit Ranking System
 
 * Excellent
 * Great
@@ -132,14 +132,14 @@ Higher rankings indicate better reliability and stability.
 
 Modules are the core of Metasploit's functionality.
 
-### Setting Parameters
+## Setting Parameters
 
 ```bash
 set RHOSTS 10.10.165.39
 set LPORT 4444
 ```
 
-### Global Parameters
+## Global Parameters
 
 Use `setg` to set a parameter across all modules:
 
@@ -148,20 +148,20 @@ setg RHOSTS 10.10.19.23
 unsetg RHOSTS
 ```
 
-### Clearing Parameters
+## Clearing Parameters
 
 ```bash
 unset PAYLOAD     # Clear one parameter
 unset all         # Clear all parameters
 ```
 
-### Running Modules
+## Running Modules
 
 * `exploit`: Run the exploit.
 * `run`: Alias for `exploit` (used for scanners, etc.).
 * `exploit -z`: Run and background the session automatically.
 
-### Sessions
+## Sessions
 
 Once a target is exploited, a **session** is created.
 
