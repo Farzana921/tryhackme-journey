@@ -4,7 +4,6 @@
 
 This document summarizes the fundamentals of using the **Metasploit Framework** as covered in Tasks 1 to 4. It includes basic usage, module components, msfconsole commands, and the exploitation workflow.
 
----
 
 ## Task 1: Introduction to Metasploit
 
