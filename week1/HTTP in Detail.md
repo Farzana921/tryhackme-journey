@@ -1,81 +1,81 @@
-# Web Fundamentals - HTTP Basics (TryHackMe Summary)
+# HTTP Basics — TryHackMe Summary
 
-This document summarizes the key concepts and learnings from completing the **"HTTP Basics"** room on TryHackMe. It covers the fundamentals of how web communication works using the HTTP protocol.
+This document summarizes the core concepts and lessons I gained from completing the **HTTP Basics** room on TryHackMe. It covers the essentials of how HTTP works and how data travels between clients and servers on the web.
 
 
 
 ## What I Learned
 
-Throughout these tasks, I developed a foundational understanding of how the web works behind the scenes. Key learnings include:
+Throughout the tasks, I built a strong foundation in understanding:
 
-- The role of HTTP/HTTPS in data transmission
-- How URLs are structured and interpreted
-- The use of HTTP methods (GET, POST, PUT, DELETE)
-- Meaning and usage of HTTP status codes
-- The importance of HTTP headers and how they are used
-- How cookies are used for stateful sessions
-- How to construct and test various types of HTTP requests
-
-
-
-## Task-by-Task Summary
-
-## Task 1: What is HTTP(S)?
-- **HTTP (HyperText Transfer Protocol)** is the protocol for communication between web clients and servers.
-- **HTTPS** adds a layer of security using encryption.
-- **Challenge Flag:** `THM{INVALID_HTTP_CERT}`
-
-
-## Task 2: Requests and Responses
-- A **URL** includes components like scheme, host, port, path, query string, and fragment.
-- HTTP requests contain a method line and headers.
-- HTTP responses return a status line, headers, and content.
--  **Headers:** `Host`, `User-Agent`, `Content-Length`, `Content-Type`
+- The difference between HTTP and HTTPS and their purposes
+- The structure and role of URLs in web requests
+- How different HTTP methods (GET, POST, PUT, DELETE) are used to interact with web servers
+- The meaning behind various HTTP status codes and how they inform client-server communication
+- The use of headers to send extra information in requests and responses
+- How cookies maintain sessions and enable user authentication
+- How to craft and execute different types of HTTP requests in practice
 
 
 
-## Task 3: HTTP Methods
-- **GET** – Retrieve data (e.g., view articles)
-- **POST** – Submit new data (e.g., register a user)
-- **PUT** – Update existing data (e.g., change settings)
-- **DELETE** – Remove data (e.g., delete uploads)
+## Breakdown
+
+## Task 1: Understanding HTTP and HTTPS
+- HTTP is the protocol for requesting and transferring webpage data.
+- HTTPS is the secure, encrypted version ensuring data privacy and server authenticity.
+- **Flag found:** `THM{INVALID_HTTP_CERT}`
 
 
-## Task 4: HTTP Status Codes
-- Codes are grouped by type:
-  - `1xx`: Informational
-  - `2xx`: Success (`200 OK`, `201 Created`)
-  - `3xx`: Redirection (`301`, `302`)
-  - `4xx`: Client Errors (`400`, `401`, `403`, `404`)
-  - `5xx`: Server Errors (`500`, `503`)
-
-
-
-## Task 5: Headers
-- **Request Headers**: `Host`, `User-Agent`, `Content-Length`, `Accept-Encoding`, `Cookie`
-- **Response Headers**: `Set-Cookie`, `Cache-Control`, `Content-Type`, `Content-Encoding`
+## Exploring Requests and Responses
+- A URL is a web address made up of several parts: scheme, user info, host, port, path, query, and fragment.
+- HTTP requests start with a method line and include headers for additional data.
+- HTTP responses include a status line, headers, and the requested content.
 
 
 
-# Task 6: Cookies
-- Cookies store session data and are used for authentication.
-- Sent using `Set-Cookie` in the response, then sent back via `Cookie` in requests.
+## HTTP Methods Overview
+- **GET** to retrieve information.
+- **POST** to submit new data.
+- **PUT** to update existing data.
+- **DELETE** to remove data.
 
 
 
-## Task 7: Making Requests (Hands-On)
-Performed different HTTP requests in an emulator:
--  `GET /room` → `THM{YOU'RE_IN_THE_ROOM}`
--  `GET /blog?id=1` → `THM{YOU_FOUND_THE_BLOG}`
--  `DELETE /user/1` → `THM{USER_IS_DELETED}`
--  `PUT /user/2` with `username=admin` → `THM{USER_HAS_UPDATED}`
--  `POST /login` with `username=thm` and `password=letmein` → `THM{HTTP_REQUEST_MASTER}`
+## HTTP Status Codes Explained
+- Status codes are grouped by category:
+  - 1xx: Informational messages
+  - 2xx: Successful responses (e.g., 200 OK, 201 Created)
+  - 3xx: Redirects
+  - 4xx: Client errors (e.g., 401 Unauthorized, 404 Not Found)
+  - 5xx: Server errors (e.g., 500 Internal Server Error, 503 Service Unavailable)
 
 
 
-## Final Thoughts
+## HTTP Headers Deep Dive
+- **Request Headers** like `Host`, `User-Agent`, and `Content-Length` provide context about the client and request.
+- **Response Headers** such as `Set-Cookie`, `Content-Type`, and `Cache-Control` deliver metadata about the response.
 
-This room gave me a solid grasp of how HTTP powers the web. From basic requests to understanding status codes and headers, these concepts are critical for both web developers and cybersecurity professionals. This knowledge lays a strong foundation for deeper topics like API interaction, web security, and penetration testing.
+
+
+## Understanding Cookies
+- Cookies are small pieces of data stored on the client to maintain state and session information.
+- They are set by servers via the `Set-Cookie` header and sent back with requests in the `Cookie` header.
+
+
+
+## Practical HTTP Requests
+- Successfully performed requests using different HTTP methods, receiving corresponding challenge flags:
+  - `GET /room` → `THM{YOU'RE_IN_THE_ROOM}`
+  - `GET /blog?id=1` → `THM{YOU_FOUND_THE_BLOG}`
+  - `DELETE /user/1` → `THM{USER_IS_DELETED}`
+  - `PUT /user/2` with `username=admin` → `THM{USER_HAS_UPDATED}`
+  - `POST /login` with `username=thm` and `password=letmein` → `THM{HTTP_REQUEST_MASTER}`
+
+
+
+## Conclusion
+
+Completing this room strengthened my understanding of the HTTP protocol and the mechanics of web communication. These fundamentals are essential for web development, debugging, and cybersecurity tasks such as penetration testing. This knowledge will serve as a solid foundation for deeper exploration into web technologies and security.
 
 
 
