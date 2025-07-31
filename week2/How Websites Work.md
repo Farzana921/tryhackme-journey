@@ -1,46 +1,50 @@
-## Web Fundamentals & Security Basics – Learning Summary
+Web Fundamentals & Security Basics – Learning Summary
+🔗 TryHackMe Room: How Websites Work
 
-🔗 Room Link: [Red Team Engagements](https://tryhackme.com/room/howwebsiteswork)
-
-
-This summary covers the key concepts and skills I learned while working through a beginner-friendly web and security training room, focusing on how websites work, front-end languages, and basic security vulnerabilities.
+This document summarizes the key concepts and practical skills I gained while completing a beginner-friendly room on how websites function, how front-end technologies work, and how basic web vulnerabilities are introduced and exploited.
 
 Task 1: How Websites Work
-Websites consist of a Front End (client-side) and a Back End (server-side).
+Websites are made of two main components:
 
-The browser sends requests to a web server, which responds with data used to render the page.
+Front End (Client-Side): What the user sees and interacts with in the browser.
 
-The Front End is what the user sees and interacts with; the Back End handles logic, databases, and responses.
+Back End (Server-Side): Handles user requests, logic, and data processing.
+
+When you visit a website, your browser sends a request to a web server, and the server sends back the necessary data to display the page.
+
+A web server is essentially a remote computer designed to respond to these kinds of requests.
 
 Task 2: HTML
-HTML (HyperText Markup Language) defines the structure of a webpage.
+HTML (HyperText Markup Language) is used to build the structure of web pages.
 
-Key HTML elements:
+Core elements:
 
-<!DOCTYPE html>: Declares HTML5.
+<!DOCTYPE html>: Declares the use of HTML5.
 
-<html>, <head>, <body>: Main structural tags.
+<html>, <head>, <body>: Define the document’s overall structure.
 
-<h1>, <p>, <img>, <button>: Content-specific tags.
+<h1>, <p>, <img>, <button>: Common content tags.
 
-HTML elements can have:
+HTML attributes:
 
-class (reusable styling),
+class: Used for styling multiple elements similarly.
 
-id (unique identifier),
+id: A unique identifier for individual elements (useful in CSS and JS).
 
-src (image source), etc.
+src: Specifies the source of an image (<img src="...">).
 
-You can inspect and view HTML on any site via "View Page Source".
+You can view the source code of any webpage using “View Page Source” in your browser.
 
 Task 3: JavaScript
-JavaScript adds interactivity and dynamic behavior to webpages.
+JavaScript (JS) enables interaction and real-time functionality on web pages.
 
-Example use: changing text when a button is clicked.
+Without JS, pages are static and non-interactive.
 
-JS can be embedded inline or via external files using <script> tags.
+JS can be added:
 
-Events like onclick allow user actions to trigger code.
+Inline using <script> tags.
+
+Externally using src attributes (e.g., <script src="..."></script>).
 
 Example:
 
@@ -48,46 +52,60 @@ js
 Copy
 Edit
 document.getElementById("demo").innerHTML = "Hack the Planet";
-Task 4: Sensitive Data Exposure
-Websites sometimes expose sensitive data in their source code.
+You can also add events like onclick to trigger code when users interact:
 
-Example vulnerabilities:
+html
+Copy
+Edit
+<button onclick='document.getElementById("demo").innerHTML = "Button Clicked";'>Click Me!</button>
+task 4: Sensitive Data Exposure
+Sometimes, developers accidentally leave sensitive information in the HTML or JavaScript source code.
 
-Hardcoded passwords in HTML comments.
+Common examples:
 
-Hidden admin links.
+Hardcoded test passwords (e.g., <!-- password: testpasswd -->)
 
-Always review the page source code when assessing security.
+Hidden links to private or admin sections
 
-Found password example: testpasswd.
+Always inspect the page source when testing a site — you might find exposed credentials or access points.
 
 Task 5: HTML Injection
-HTML Injection occurs when user input is not sanitized and is directly rendered into the page.
+HTML Injection happens when user input is displayed on the page without proper sanitization.
 
-Malicious users can inject HTML or JavaScript to change the page’s structure or behavior.
+This allows attackers to inject their own HTML or even JavaScript into the page.
 
-This is a client-side vulnerability.
-
-Prevent it by sanitizing all user input before rendering.
-
-Example exploit:
+Example attack:
 
 html
 Copy
 Edit
 <a href="http://hacker.com">Click me</a>
- What I Gained from These Tasks
-Solid understanding of the core technologies that power the web: HTML, CSS, JS.
+To prevent this, all user input must be sanitized before being rendered.
 
-Awareness of how web requests and responses work.
+What I Learned
+Clear understanding of how websites work from front to back.
 
-Learned to identify and exploit basic security issues like:
+Gained foundational knowledge of:
 
-Sensitive data exposure
+HTML (structure)
 
-HTML injection
+CSS (styling, briefly)
 
-Gained hands-on experience in web debugging and inspection tools.
+JavaScript (behavior & interaction)
 
-Strengthened understanding of safe coding practices like input sanitization.
+Learned about basic web vulnerabilities:
 
+Sensitive Data Exposure
+
+HTML Injection
+
+Improved skills in:
+
+Viewing and analyzing web page source code
+
+Writing and reading HTML and JavaScript
+
+Recognizing common security oversights
+
+Reinforced the golden rule of web development:
+"Never trust user input!" – Always sanitize and validate it.
