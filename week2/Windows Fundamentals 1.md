@@ -4,105 +4,53 @@ Windows Fundamentals Summary
 🔗 Room Link: [Windows Fundamentals 1](https://tryhackme.com/room/windowsfundamentals1xbx)
 
 
-1. Introduction to Windows
+## 1. Introduction to Windows  
+Windows is a complex operating system with many components including system files, utilities, and settings. This overview covers the basic navigation, system changes, and key Windows features. A virtual machine can be used for hands-on practice.
 
+## 2. Windows Editions  
+- Windows has evolved since 1985 and dominates both home and corporate use.  
+- Popular versions: XP, Vista (poorly received), 7, 8.x (short-lived), 10, and the current Windows 11 (Home and Pro).  
+- Windows Server 2019 Standard is used for servers (VM edition here).  
+- Pro edition supports BitLocker encryption; Home does not.
 
-Windows is a widely used, feature-rich operating system.
+## 3. The Desktop (GUI)  
+- The GUI includes components like the Desktop, Start Menu, Search Box (Cortana), Task View, Taskbar, Toolbars, and Notification Area.  
+- Desktop contains shortcuts and files for quick access; it’s customizable via right-click options and Personalize settings.  
+- The Start Menu offers access to apps, settings, and power options, organized with recently added and alphabetized apps, plus tiles for pinned apps.  
+- Taskbar shows running apps; icons can be pinned or previewed on hover.  
+- Notification Area displays time, volume, network, and Action Center icons.
 
-Practice using a Windows VM with provided credentials.
+## 4. The File System  
+- Modern Windows uses NTFS (New Technology File System), which supports:  
+  - Files larger than 4GB  
+  - Permissions on files/folders  
+  - Compression and encryption (EFS)  
+- NTFS is a journaling file system that can self-repair after crashes.  
+- Permissions include Full Control, Modify, Read & Execute, etc.  
+- Alternate Data Streams (ADS) allow hidden data streams within files, sometimes used maliciously.
 
-The module covers basic Windows components and administration.
+## 5. The Windows\System32 Folder  
+- Located under the Windows directory (environment variable `%windir%`).  
+- Contains critical system files; accidental deletion can break the OS.  
+- Many essential Windows tools reside here.
 
-2. Windows Editions
-Windows versions: XP → Vista → 7 → 8.x → 10 → 11.
+## 6. User Accounts, Profiles, and Permissions  
+- Two main user types: Administrator (full control) and Standard User (limited).  
+- User profiles are created at first login under `C:\Users\Username`.  
+- User and group management is done via `lusrmgr.msc`, where users can be assigned to groups with defined permissions.
 
-Windows 10 support ends Oct 2025; Windows 11 is the latest desktop version.
+## 7. User Account Control (UAC)  
+- Protects systems by running admin users with standard privileges by default.  
+- When elevated privileges are needed, UAC prompts for confirmation or credentials.  
+- Helps reduce malware risk by limiting automatic admin rights.
 
-Editions include Home and Pro; Pro supports features like BitLocker encryption.
+## 8. Settings and Control Panel  
+- Two main interfaces for system configuration:  
+  - **Settings** (modern interface introduced in Windows 8, touch-friendly)  
+  - **Control Panel** (traditional interface with more advanced options)  
+- Some settings start in Settings but open Control Panel for detailed configuration.
 
-The VM uses Windows Server 2019 Standard edition.
-
-3. The Desktop (GUI)
-The Desktop appears after login (requires username/password).
-
-Key components: Desktop, Start Menu, Search Box (Cortana), Task View, Taskbar, Toolbars, Notification Area.
-
-Desktop contains shortcuts and can be personalized (right-click to access options).
-
-Start Menu sections: user shortcuts (account settings, power options), recently added apps and full app list, and live tiles.
-
-Taskbar shows open/pinned apps; hovering shows preview thumbnails.
-
-Notification Area includes clock, network, volume, and Action Center icons.
-
-4. File System
-Windows uses NTFS (New Technology File System).
-
-NTFS supports large files (>4GB), permissions, compression, and encryption (EFS).
-
-Older FAT16/FAT32 still used on USB drives and SD cards.
-
-NTFS is journaling, allowing recovery after crashes.
-
-Permissions include Full Control, Modify, Read & Execute, List Folder Contents, Read, Write.
-
-Alternate Data Streams (ADS) allow extra data attached to files, sometimes used by malware.
-
-5. Windows\System32 Folder
-The %windir%\System32 folder contains critical system files.
-
-Deleting/modifying System32 files can break Windows.
-
-Many Windows tools reside in System32.
-
-%windir% is an environment variable pointing to the Windows folder location.
-
-6. User Accounts, Profiles, and Permissions
-Two main account types: Administrator (full system control) and Standard User (limited to personal files).
-
-User profiles stored in C:\Users\Username. Created at first login.
-
-Users belong to groups (e.g., Users, Remote Desktop Users) that define permissions.
-
-Use lusrmgr.msc (Local Users and Groups) to view/manage accounts and groups.
-
-7. User Account Control (UAC)
-Prevents programs from running with elevated rights unless authorized.
-
-Admins don’t run with full privileges by default; UAC prompts on high-privilege actions.
-
-The shield icon indicates programs that require elevation.
-
-UAC helps reduce malware risk by requiring explicit permission for system changes.
-
-8. Settings and Control Panel
-Two interfaces for system settings: modern Settings and legacy Control Panel.
-
-Settings is touch-friendly and the primary interface in Windows 10.
-
-Control Panel is for advanced settings; some Settings options open Control Panel dialogs.
-
-Use Start Menu search to find where to change settings (Settings or Control Panel).
-
-Example: Changing wallpaper is done via Settings.
-
-9. Task Manager
-Shows running apps, processes, CPU/RAM usage, and more.
-
-Open via right-clicking taskbar or shortcut Ctrl+Shift+Esc.
-
-Starts in Simple View; click “More details” for full information.
-
-Useful for monitoring system health and troubleshooting.
-
-Key Terms & Shortcuts
-NTFS: New Technology File System
-
-%windir%: Environment variable for Windows folder
-
-UAC: User Account Control
-
-lusrmgr.msc: Local Users and Groups management console
-
-Task Manager shortcut: Ctrl + Shift + Esc
-
+## 9. Task Manager  
+- Shows running applications, processes, CPU, and RAM usage.  
+- Access by right-clicking the taskbar or pressing `Ctrl+Shift+Esc`.  
+- Default view is simple; “More details” reveals extensive info.
